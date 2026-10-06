@@ -995,6 +995,7 @@ sub singletest_run {
         $valgrindcmd .= "--suppressions=$srcdir/valgrind.supp ";
         # $valgrindcmd .= "--gen-suppressions=all ";
         $valgrindcmd .= "--num-callers=16 ";
+        $valgrindcmd .= "--expensive-definedness-checks=yes ";
         $valgrindcmd .= "--log-file=$LOGDIR/valgrind$testnum";  # valgrind >=3
         $CMDLINE = "$valgrindcmd $CMDLINE";
     }
